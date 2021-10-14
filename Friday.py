@@ -75,7 +75,7 @@ def wish():
 #to news api
 
 def news():
-    main_url = "http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=f6c14e2cab554378974887255cff7a09"
+    main_url = "http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=___________________"      #paste your key in the dash
     main_page = requests.get(main_url).json()
     articles = main_page["articles"]
     head = []
