@@ -28,7 +28,7 @@ About - answers mathematical and geographical questions
 Wikipedia search - searches Wikipedia summary and reads about you asked                         
 Open youtube - opens youtube.com                                                                   
 My email - opens email                                                                                      
-News - opens google news                                                                               
+News - tells news                                                                               
 Calendar - opens google calendar                                                                                                                              
 tell me weather forecast - shows weather conditions                                               
 Stock price of [**keyword**]- shows prices that you asked                                           
