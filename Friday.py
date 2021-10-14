@@ -165,7 +165,7 @@ def pdf_reader():
 #to contact suport 
 
 def support():
-    url = "https://github.com/https-github-com-zameel28/J.A.R.V.I.S"
+    url = "https://github.com/https-github-com-zameel28/F.R.I.D.A.Y"
     webbrowser.get().open(url)
 
 #setup audio
@@ -211,7 +211,7 @@ class MainThread(QThread):
 #main task execution
 
     def TaskExecution(self):
-            #setup()
+            setup()
             wish()
             while True:
                 self.query = self.takecommand().lower()
@@ -326,8 +326,8 @@ class MainThread(QThread):
                 elif 'ask' in self.query or "question" in self.query:
                     speak('I can answer to computational and geographical questions  and what question do you want to ask now')
                     question = self.takecommand().lower()
-                    app_id="QTLYH7-V6AA542ERG"
-                    client = wolframalpha.Client('QTLYH7-V6AA542ERG')
+                    app_id="your key"
+                    client = wolframalpha.Client('your key')
                     res = client.query(question)
                     answer = next(res.results).text
                     speak(answer)
@@ -337,8 +337,8 @@ class MainThread(QThread):
                     speak("What should i say")
                     self.query = self.takecommand().lower()
     
-                    email = "blynkofzameel@gmail.com"
-                    password = "Blynk123"
+                    email = "yourmail@gmail.com"
+                    password = "passcode"
                     send_to_person = input("Enter the reciver ID:")
                     message = self.query
 
