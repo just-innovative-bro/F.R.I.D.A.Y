@@ -14,6 +14,11 @@ When you command as **tell me a joke** and can send emails and writes mail conte
 
 ## Updates
 All new update for **Jarvis** to **Friday**
+Male voice from Jarvis changed to Female voice in Friday.
+For better female voice, we moved to gtts module from pyttsx3 module.
+We added new commands like reading pdf,opening camer and many more.
+Instead of playing only one song while Friday intro and satrtup we addded few more mp3 files and we added all of them in a random function, so that it plays randomly instead of playing only one mp3 file.
+
 
 ## Commands
  
@@ -28,7 +33,7 @@ About - answers mathematical and geographical questions
 Wikipedia search - searches Wikipedia summary and reads about you asked                         
 Open youtube - opens youtube.com                                                                   
 My email - opens email                                                                                      
-News - tells news                                                                               
+News - opens google news                                                                               
 Calendar - opens google calendar                                                                                                                              
 tell me weather forecast - shows weather conditions                                               
 Stock price of [**keyword**]- shows prices that you asked                                           
@@ -151,7 +156,6 @@ For App_Id of [Wolfram|Aplha App id](https://www.wolframalpha.com/) follow below
 13. [openCV](https://pypi.org/project/opencv-python/)
 14. [Webbrowser](https://pypi.org/project/pycopy-webbrowser/)
 15. [Psutill](https://pypi.org/project/psutil/)
-16. [NEWS api](https://newsapi.org/)
 ## Contributing
 Pull requests are welcome. Please open an issue first to discuss what you would like to change for major changes.
 
