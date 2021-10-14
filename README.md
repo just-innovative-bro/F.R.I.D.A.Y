@@ -151,6 +151,7 @@ For App_Id of [Wolfram|Aplha App id](https://www.wolframalpha.com/) follow below
 13. [openCV](https://pypi.org/project/opencv-python/)
 14. [Webbrowser](https://pypi.org/project/pycopy-webbrowser/)
 15. [Psutill](https://pypi.org/project/psutil/)
+16. [NEWS api](https://newsapi.org/)
 ## Contributing
 Pull requests are welcome. Please open an issue first to discuss what you would like to change for major changes.
 
