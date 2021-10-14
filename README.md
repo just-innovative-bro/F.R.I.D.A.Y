@@ -110,9 +110,6 @@ pip install pyjokes
 ```python
 pip install psutil
 ```
-```python
-pip install polygon-api-client 
-```
 for PyAudio if there is any problem in installing use this [click here](https://www.lfd.uci.edu/~gohlke/pythonlibs/) and search PyAudio and install
 or use this youtube video [click here](https://www.youtube.com/watch?v=-3am_5jMzJ4&t=307s)                                                                              
 For App_Id of [Wolfram|Aplha App id](https://www.wolframalpha.com/) follow below                              
@@ -154,7 +151,6 @@ For App_Id of [Wolfram|Aplha App id](https://www.wolframalpha.com/) follow below
 13. [openCV](https://pypi.org/project/opencv-python/)
 14. [Webbrowser](https://pypi.org/project/pycopy-webbrowser/)
 15. [Psutill](https://pypi.org/project/psutil/)
-14. [Polygon-api-client](https://polygon.io/)
 ## Contributing
 Pull requests are welcome. Please open an issue first to discuss what you would like to change for major changes.
 
