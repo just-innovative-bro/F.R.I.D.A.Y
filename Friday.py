@@ -177,7 +177,8 @@ def setup():
 #intro audio
 
 def intro():
-    audioplayer.AudioPlayer('Iron Man Music.mp3').play(block=True)
+    list = ["Ironman Airborne.mp3", "Iron Man Music.mp3", "Iron Man.mp3"]
+    audioplayer.AudioPlayer(random.choice(list)).play(block=True)
 
 #main
 
