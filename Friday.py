@@ -385,7 +385,7 @@ class MainThread(QThread):
                 elif "sleep the system" in self.query:
                     os.system("rundll32.exe powerprof.dll,SetSuspendState 0,1,0")    
 
-                elif "window" in self.query:
+                elif "change window" in self.query:
                     speak("switching windows")
                     pyautogui.keyDown("alt")
                     pyautogui.keyDown("tab")
