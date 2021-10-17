@@ -54,7 +54,8 @@ Take a screenshot - takes a screenshot
 Play music - plays music on your system                                                                                                               
 Support - opens github support
 CPU clocks - tells CPU frequency                                                                    
-Tell me a joke - tells a joke                                                                    
+Tell me a joke - tells a joke 
+Change window - changes window
 Not for you - comments your commands                                                                    
 Logout - logouts your pc                                                                     
 Shutdown - shutdowns your pc                                                                   
