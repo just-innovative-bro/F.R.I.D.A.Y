@@ -470,4 +470,4 @@ class Main(QMainWindow):
 app = QApplication(sys.argv)
 friday = Main()
 friday.show()
-exit(app.exec_())                                
+sys.exit(app.exec_())                                
