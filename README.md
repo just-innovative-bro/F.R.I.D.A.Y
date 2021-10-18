@@ -45,7 +45,7 @@ Which day it is - tells the present day
 Send email - sends an email to the address which is given in the program                                
 Say about you - says about him 
 Read PDF - to read pdf
-Open camera - opens camera                                                                      
+Open camera - opens camera    (press "q" to close cam)                                                                  
 Remember this- remembers what do you say                                                           
 Do you know anything - tells what you said in remember                                          
 Write a note - writes a note what you speak                                                           
