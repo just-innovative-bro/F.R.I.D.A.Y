@@ -23,43 +23,49 @@ Instead of playing only one song while Friday intro and satrtup we addded few mo
 ## Commands
  
 
-What's your name - tells his name                                                                
-My name is [**your name**] - remembers your name                                       
-Your name should be [**name you want to assistant**] - changes his name                           
-What is my name - says your name                                                                  
-Search for [**search team**] - searches for what you asked                                        
-Home dashboard - sinricpro dashboard                                        
-About - answers mathematical and geographical questions       
-Wikipedia search - searches Wikipedia summary and reads about you asked                         
-Open youtube - opens youtube.com                                                                   
-My email - opens email                                                                                      
-News - opens google news                                                                               
-Calendar - opens google calendar                                                                                                                              
-tell me weather forecast - shows weather conditions                                               
-Stock price of [**keyword**]- shows prices that you asked                                           
-What is my exact location - shows your location on google maps                                  
-Where am i -                                                                                              
-Tell me time - tells the time                                                                     
-Date - tells the date                                                                              
-Which day it is - tells the present day                                                                              
-Send email - sends an email to the address which is given in the program                                
-Say about you - says about him 
-Read PDF - to read pdf
-Open camera - opens camera    (press "q" to close cam)                                                                  
-Remember this- remembers what do you say                                                           
-Do you know anything - tells what you said in remember                                          
-Write a note - writes a note what you speak                                                           
-Show note - reads the written note                                           
-Take a screenshot - takes a screenshot                                                                  
-Play music - plays music on your system                                                                                                               
-Support - opens github support
-CPU clocks - tells CPU frequency                                                                    
-Tell me a joke - tells a joke 
-Change window - changes window
-Not for you - comments your commands                                                                    
-Logout - logouts your pc                                                                     
-Shutdown - shutdowns your pc                                                                   
-Restart - restarts your pc                                                                                                                                                                                                                                                         
+open calender - opens calender
+open command prompt - opens command prompt
+open camera - opens camera
+ip adress - says ip adress
+intoduce your self - says intro
+time - tells time
+take a screenshort - takes a screenshot
+support - opens github support
+stock price of [keyword] - tells latest cost of stock price
+open youtube [keyword] - opens youtube and searchs your query
+wikipedia search [keyword] - tells the summary of the query
+search google [keyword] - searchs google for your query
+how are you - 
+i love you - 
+write a note - writes a note 
+show note - reads your note
+day - tells current day 
+route to - opens google maps 
+news - tells news
+read pdf - reads pdf
+acivate how to mode - multiple answer search mode
+toss coin or flip coin - coin flip 
+send a message - sends a message throght whatsapp
+play song on youtube - plays song on youtube
+ask or question - answers the asked question
+send emali - sends emali
+where i am or where we are - tells current location
+tell me a joke - tells jokes
+change window - changes window
+shut down the system - system shut down
+restart the system - restart system
+sleep the system - sleep system
+sleep now - breaks program
+exit - program ends
+
+
+## Communication commands
+hey, hi, hai, hello and ok - responds
+my name is [your name] - stores your name
+your name should be [name your assistant] - stores it's name
+how are you  or how are you doing - responds
+what is my name - tells your name
+what is your name,  what's your name and tell me your name  - tells her name                                                                                                                                                                                                                                                 
 
 
 ## Installing package required
