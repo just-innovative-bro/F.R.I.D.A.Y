@@ -90,9 +90,6 @@ pip install PyAutoGUI
 pip install Pyjokes
 ```
 ```python
-pip install PyAudio
-```
-```python
 pip install Wolframalpha 
 ```
 ```pyhton
@@ -153,16 +150,15 @@ For App_Id of [Wolfram|Aplha App id](https://www.wolframalpha.com/) follow below
 3. [Wikipedia](https://pypi.org/project/wikipedia/)
 4. [PyAutoGUI](https://pypi.org/project/PyAutoGUI/)
 5. [Pyjokes](https://pypi.org/project/pyjokes/)
-6. [Pyaudio](https://pypi.org/project/PyAudio/)
-7. [Wolframalpha](https://pypi.org/project/wolframalpha/)
-8. [AudioPlayer](https://pypi.org/project/audioplayer/)
-9. [Smtlib](https://pypi.org/project/secure-smtplib/)
-10. [Pywhatkit](https://pypi.org/project/pywhatkit/)
-11. [PyPDF2](https://pypi.org/project/PyPDF2/)
-12. [PyQt5](https://pypi.org/project/PyQt5/)
-13. [openCV](https://pypi.org/project/opencv-python/)
-14. [Webbrowser](https://pypi.org/project/pycopy-webbrowser/)
-15. [Psutill](https://pypi.org/project/psutil/)
+6. [Wolframalpha](https://pypi.org/project/wolframalpha/)
+7. [AudioPlayer](https://pypi.org/project/audioplayer/)
+8. [Smtlib](https://pypi.org/project/secure-smtplib/)
+9. [Pywhatkit](https://pypi.org/project/pywhatkit/)
+10. [PyPDF2](https://pypi.org/project/PyPDF2/)
+11. [PyQt5](https://pypi.org/project/PyQt5/)
+12. [openCV](https://pypi.org/project/opencv-python/)
+13. [Webbrowser](https://pypi.org/project/pycopy-webbrowser/)
+14. [Psutill](https://pypi.org/project/psutil/)
 ## Contributing
 Pull requests are welcome. Please open an issue first to discuss what you would like to change for major changes.
 
