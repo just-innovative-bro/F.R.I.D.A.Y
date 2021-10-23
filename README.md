@@ -23,35 +23,35 @@ Instead of playing only one song while Friday intro and satrtup we addded few mo
 ## Commands
  
 
-open calender - opens calender
-open command prompt - opens command prompt
-open camera - opens camera
-ip adress - says ip adress
-intoduce your self - says intro
+open calender - opens calender       
+open command prompt - opens command prompt  
+open camera - opens camera  
+ip adress - says ip adress  
+intoduce your self - says intro  
 time - tells time
-take a screenshort - takes a screenshot
-support - opens github support
-stock price of [keyword] - tells latest cost of stock price
-open youtube [keyword] - opens youtube and searchs your query
-wikipedia search [keyword] - tells the summary of the query
-search google [keyword] - searchs google for your query
-how are you - 
-i love you - 
-write a note - writes a note 
-show note - reads your note
-day - tells current day 
-route to - opens google maps 
-news - tells news
-read pdf - reads pdf
-acivate how to mode - multiple answer search mode
-toss coin or flip coin - coin flip 
-send a message - sends a message throght whatsapp
-play song on youtube - plays song on youtube
-ask or question - answers the asked question
-send emali - sends emali
-where i am or where we are - tells current location
-tell me a joke - tells jokes
-change window - changes window
+take a screenshort - takes a screenshot  
+support - opens github support  
+stock price of [keyword] - tells latest cost of stock price  
+open youtube [keyword] - opens youtube and searchs your query  
+wikipedia search [keyword] - tells the summary of the query  
+search google [keyword] - searchs google for your query  
+how are you -   
+i love you -   
+write a note - writes a note   
+show note - reads your note  
+day - tells current day   
+route to - opens google maps   
+news - tells news  
+read pdf - reads pdf  
+acivate how to mode - multiple answer search mode  
+toss coin or flip coin - coin flip  
+send a message - sends a message throght whatsapp  
+play song on youtube - plays song on youtube  
+ask or question - answers the asked question  
+send emali - sends emali  
+where i am or where we are - tells current location  
+tell me a joke - tells jokes  
+change window - changes window  
 shut down the system - system shut down
 restart the system - restart system
 sleep the system - sleep system
@@ -60,12 +60,12 @@ exit - program ends
 
 
 ## Communication commands
-hey, hi, hai, hello and ok - responds
-my name is [your name] - stores your name
-your name should be [name your assistant] - stores it's name
-how are you  or how are you doing - responds
-what is my name - tells your name
-what is your name,  what's your name and tell me your name  - tells her name                                                                                                                                                                                                                                                 
+hey, hi, hai, hello and ok - responds  
+my name is [your name] - stores your name  
+your name should be [name your assistant] - stores it's name  
+how are you  or how are you doing - responds  
+what is my name - tells your name  
+what is your name,  what's your name and tell me your name  - tells her name                                                                                                                                                                                                                                                   
 
 
 ## Installing package required
