@@ -19,10 +19,13 @@ For better female voice, we moved to gtts module from pyttsx3 module.
 We added new commands like reading pdf,opening camer and many more.
 Instead of playing only one song while Friday intro and satrtup we addded few more mp3 files and we added all of them in a random function, so that it plays randomly instead of playing only one mp3 file.
 
+## Installation on Windows (64-bit)
+Go to [Releases](https://github.com/https-github-com-zameel28/F.R.I.D.A.Y/releases) and download the your file and open folder and follow instructions on screen.
+The better is to download **console** version to understand when it is listening......
+
+![F.R.I.D.A.Y.](https://ibb.co/m6WxMK5)
 
 ## Commands
- 
-
 open calender - opens calender  
 open command prompt - opens command prompt   
 open camera - opens camera  
