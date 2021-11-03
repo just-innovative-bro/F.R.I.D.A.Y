@@ -22,7 +22,7 @@ Instead of playing only one song while Friday intro and satrtup we addded few mo
 ## Installation on Windows (64-bit)
 Go to [Releases](https://github.com/https-github-com-zameel28/F.R.I.D.A.Y/releases) and download the your file and open folder and follow instructions on screen.
 The better is to download **console** version to understand when it is listening......
-
+## First view
 ![F.R.I.D.A.Y.](https://i.ibb.co/qkQZP8Y/Screenshot-2021-10-30-125722.jpg)
 
 ## Commands
