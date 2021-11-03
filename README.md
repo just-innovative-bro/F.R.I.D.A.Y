@@ -25,6 +25,8 @@ The better is to download **console** version to understand when it is listening
 ## First view
 ![F.R.I.D.A.Y.](https://i.ibb.co/qkQZP8Y/Screenshot-2021-10-30-125722.jpg)
 
+click **INITIATE** to start program
+
 ## Commands
 open calender - opens calender  
 open command prompt - opens command prompt   
