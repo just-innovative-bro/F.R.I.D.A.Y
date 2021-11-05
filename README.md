@@ -170,3 +170,4 @@ Please make sure to update tests as appropriate.
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
+![Your Repository’s Stats](https://github-readme-stats.vercel.app/api?username=Zameel-Byte&show_icons=true)
