@@ -169,8 +169,3 @@ Pull requests are welcome. Please open an issue first to discuss what you would 
 Please make sure to update tests as appropriate.
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
-
-## Github stats
-![Your Repository’s Stats](https://github-readme-stats.vercel.app/api?username=Zameel-Byte&show_icons=true)
-## Languages used
-![Your Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=Zameel-Byte&theme=blue-green)
