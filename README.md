@@ -173,3 +173,4 @@ Pull requests are welcome. Please open an issue first to discuss what you would 
 Please make sure to update tests as appropriate.
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+<img src="https://img.shields.io/github/license/just-innovative-bro/F.R.I.D.A.Y">
