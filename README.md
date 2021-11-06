@@ -169,6 +169,7 @@ For App_Id of [Wolfram|Aplha App id](https://www.wolframalpha.com/) follow below
 Pull requests are welcome. Please open an issue first to discuss what you would like to change for major changes.
 
 ![Your Repository's Stats](https://contrib.rocks/image?repo=just-innovative-bro/F.R.I.D.A.Y)
+
 Please make sure to update tests as appropriate.
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
