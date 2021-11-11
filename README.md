@@ -174,4 +174,4 @@ Please make sure to update tests as appropriate.
 ## License
 <img src="https://img.shields.io/github/license/just-innovative-bro/F.R.I.D.A.Y">
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/just-innovative-bro/F.R.I.D.A.Y/blob/main/LICENSE)
