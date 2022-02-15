@@ -138,7 +138,7 @@ For App_Id of [Wolfram|Aplha App id](https://www.wolframalpha.com/) follow below
 
 3. Now you will see the homepage of the website. Head to the section in the top right corner where you see your email. In the drop down menu, select the My Apps (API) option.
 
-![Test Image 2](https://media.geeksforgeeks.org/wp-content/uploads/20191001183957/Screenshot-818.png)
+<p align="center"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20191001183957/Screenshot-818.png"></p>
 
 
 
