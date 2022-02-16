@@ -25,7 +25,7 @@ Instead of playing only one song while Friday intro and satrtup we addded few mo
 Go to [Releases](https://github.com/https-github-com-zameel28/F.R.I.D.A.Y/releases) and download the your file and open folder and follow instructions on screen.
 The better is to download **console** version to understand when it is listening......
 ## First view
-![F.R.I.D.A.Y.](https://i.ibb.co/qkQZP8Y/Screenshot-2021-10-30-125722.jpg)
+<p align = "center"><img src="https://i.ibb.co/qkQZP8Y/Screenshot-2021-10-30-125722.jpg"></p>
 
 click **initialize** to start program
 
@@ -82,47 +82,19 @@ open terminal and type these to install
 
 ```python
 pip install gTTS
-```
-```python
 pip install SpeechRecognition
-```
-```python
 pip install Wikipedia
-```
-```python
 pip install PyAutoGUI
-```
-```python
 pip install Pyjokes
-```
-```python
 pip install Wolframalpha 
-```
-```pyhton
 pip install AudioPlayer
-```
-```pyhton
 pip install secure-smtplib
-```
-```python
 pip install pywhatkit
-```
-```python
 pip install PyPDF2
-```
-```python
 pip install PyQt5
-```
-```python
 pip install opencv-python
-```
-```python
 pip install pycopy-webbrowser
-```
-```python
 pip install pyjokes
-```
-```python
 pip install psutil
 ```
 for PyAudio if there is any problem in installing use this [click here](https://www.lfd.uci.edu/~gohlke/pythonlibs/) and search PyAudio and install
