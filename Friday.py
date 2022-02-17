@@ -1,9 +1,7 @@
-import ntpath
 import os
 import sys
 from gtts import gTTS  # pip install gTTS
 import requests
-from requests.api import request
 import speech_recognition as sr  # pip install speechRecognition
 import datetime
 import time
@@ -17,19 +15,12 @@ import pyjokes  # pip install pyjokes
 import pyautogui  # pip install pyautogui
 import psutil  # pip install psutil
 import PyPDF2  # pip install PyPDF2
-import pywikihow  # pip install pywikihow
-from audioplayer import AudioPlayer
-from PyQt5 import QtWidgets, QtGui, QtCore  # pip install PyQt5
-from PyQt5.QtCore import QTimer, QTime, QDate, Qt
-from PyQt5.QtGui import QMovie
+from PyQt5 import QtGui  # pip install PyQt5
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-from PyQt5.uic import loadUiType
 from FridayUI import Ui_friday  # from the UI program
 import audioplayer  # pip install audioplayer
-from polygon import RESTClient  # pip install polygon-api-client
-from polygon import WebSocketClient, STOCKS_CLUSTER
 import wolframalpha  # pip install wolframalpha
 
 
