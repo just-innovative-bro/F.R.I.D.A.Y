@@ -24,16 +24,15 @@ import audioplayer  # pip install audioplayer
 import wolframalpha  # pip install wolframalpha
 
 
-# the name setting
 
-class person:
+class person:   #user name setting
     name = ''
 
     def setName(self, name):
         self.name = name
 
 
-class friday:
+class friday:   #assistant name setting
     name = ''
 
     def setName(self, name):
@@ -45,18 +44,15 @@ friday_obj = friday()
 friday.name = ''
 person_obj.name = ""
 
-# to speak
 
 
-def speak(audio):
+def speak(audio):   # to speak
     tts = gTTS(audio)
     tts.save('friday.mp3')
     audioplayer.AudioPlayer('friday.mp3').play(block=True)
 
-# to wish
 
-
-def wish():
+def wish():    # to wish
     hour = int(datetime.datetime.now().hour)
 
     if hour >= 8 and hour < 12:
@@ -67,10 +63,8 @@ def wish():
         speak("good evening")
     speak("i am friday sir. please tell me how can i help you")
 
-# to news api
 
-
-def news():
+def news(): # to news api
     # paste your key in the dash
     main_url = "http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=___________________"
     main_page = requests.get(main_url).json()
@@ -83,10 +77,8 @@ def news():
     for i in range(len(day)):
         speak(f"today's {day[i]} news is: {head[i]}")
 
-# to tell day
 
-
-def tellDay():
+def tellDay():  # to tell day
 
     day = datetime.datetime.today().weekday() + 1
 
@@ -100,10 +92,9 @@ def tellDay():
         print(day_of_the_week)
         speak("The day is " + day_of_the_week)
 
-# to tell date
 
 
-def date():
+def date():     # to tell date
     year = int(datetime.datetime.now().year)
     month = int(datetime.datetime.now().month)
     date = int(datetime.datetime.now().day)
@@ -112,17 +103,14 @@ def date():
     speak(month)
     speak(year)
 
-# to take screenshot
 
-
-def screenshot():
+def screenshot():       # to take screenshot
     img = pyautogui.screenshot()
     img.save("screen.png")
 
-# to cpu ststs
 
 
-def cpu():
+def cpu():      # to cpu ststs
     usage = str(psutil.cpu_percent())
     speak("CPU is at" + usage)
     battery = psutil.sensors_battery()
@@ -133,10 +121,8 @@ def cpu():
     speak("battery is at ")
     speak(percent+'% | '+plugged)
 
-# to camera
 
-
-def cam():
+def cam():      # to camera
     video_capture = cv2.VideoCapture(0)
 
     cv2.namedWindow("Facecam")
@@ -152,10 +138,8 @@ def cam():
     video_capture.release()
     cv2.destroyAllWindows()
 
-# to read pdf
 
-
-def pdf_reader():
+def pdf_reader():       # to read pdf
     book = open(input("enter path to pdf:"), 'rb')
     pdfReader = PyPDF2.PdfFileReader(book)
     pages = pdfReader.getNumPages()
@@ -166,39 +150,31 @@ def pdf_reader():
     text = page.extractText()
     speak(text)
 
-# to contact suport
 
-
-def support():
+def support():      # to contact suport
     url = "https://github.com/https-github-com-zameel28/F.R.I.D.A.Y"
     webbrowser.get().open(url)
 
-# setup audio
 
-
-def setup():
+def setup():        # setup audio
     list = ["Ironman Airborne.mp3", "Iron Man Music.mp3", "Iron Man.mp3"]
     audioplayer.AudioPlayer(random.choice(list)).play(block=True)
 
-# intro audio
 
-
-def intro():
+def intro():        # intro audio
     list = ["Ironman Airborne.mp3", "Iron Man Music.mp3", "Iron Man.mp3"]
     audioplayer.AudioPlayer(random.choice(list)).play(block=True)
 
-# main
 
 
-class MainThread(QThread):
+class MainThread(QThread):      # main
 
     def run(self):
         self.TaskExecution()
 
-# speech-to-text
 
     @staticmethod
-    def takecommand():
+    def takecommand():      # speech-to-text
         r = sr.Recognizer()
         with sr.Microphone() as source:
             print("Listening...")
@@ -215,9 +191,8 @@ class MainThread(QThread):
             return "None"
         return query
 
-# main task execution
 
-    def TaskExecution(self):
+    def TaskExecution(self):        # main task execution
         setup()
         wish()
         while True:
