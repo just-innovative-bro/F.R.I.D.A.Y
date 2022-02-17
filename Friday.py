@@ -430,7 +430,8 @@ class MainThread(QThread):
                 how = self.takecommand()
                 max_result = 1
                 how_to = search_wikihow(how, max_result)
-                assert len(how_to) == 1
+                if len(how_to) != 1:
+                    raise AssertionError
                 how_to[0].print()
                 speak(how_to[0].summary)
 
