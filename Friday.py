@@ -12,7 +12,6 @@ import random
 from requests import get
 import wikipedia  # pip install wikipedia
 import webbrowser  # pip install webbrowser
-# import pywhatkit as kit                             #pip install pywhatkit
 import smtplib  # pip install smtlib
 import pyjokes  # pip install pyjokes
 import pyautogui  # pip install pyautogui
@@ -223,7 +222,6 @@ class MainThread(QThread):
             print(f"User said: {query}\n")
 
         except Exception as e:
-            # print(e)
             print("Say that again please...")
             return "None"
         return query
@@ -334,15 +332,7 @@ class MainThread(QThread):
 
             # add more url's
 
-            # elif "send message" in self.query:
-            #     speak("What should i send?")
-            #     msg = self.takecommand().lower()
-            #     kit.sendwhatmsg("your number",msg,2,25)
 
-            # elif "play song on youtube" in self.query:
-            #     speak("what song you want to listen to?")
-            #     song = self.takecommand().lower()
-            #     kit.playonyt(song)
 
             elif 'ask' in self.query or "question" in self.query:
                 speak(
@@ -386,12 +376,6 @@ class MainThread(QThread):
                 except Exception as e:
                     speak("sorry sir")
 
-            # elif "send message" in self.query:
-            #     speak("What should i send?")
-            #     msg = self.takecommand().lower()
-            #     hr = datetime.datetime.now().strftime("%H")
-            #     min = datetime.datetime.now().strftime("%M") +3
-            #     kit.sendwhatmsg("your number",msg,hr,min)
 
             elif "tell me a joke" in self.query:
                 joke = pyjokes.get_joke()
