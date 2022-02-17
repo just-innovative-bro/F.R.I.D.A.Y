@@ -6,7 +6,6 @@ import requests
 from requests.api import request
 import speech_recognition as sr  # pip install speechRecognition
 import datetime
-import os
 import time
 import cv2  # pip install opencv-python
 import random
