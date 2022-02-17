@@ -191,8 +191,6 @@ def intro():
 
 
 class MainThread(QThread):
-    def __init__(self):
-        super(MainThread, self).__init__()
 
     def run(self):
         self.TaskExecution()
