@@ -95,7 +95,7 @@ def tellDay():
                 5: 'Friday', 6: 'Saturday',
                 7: 'Sunday'}
 
-    if day in Day_dict.keys():
+    if day in Day_dict:
         day_of_the_week = Day_dict[day]
         print(day_of_the_week)
         speak("The day is " + day_of_the_week)
