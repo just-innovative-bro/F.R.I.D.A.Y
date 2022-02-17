@@ -11,7 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_friday(object):
+class Ui_friday:
     def setupUi(self, friday):
         friday.setObjectName("friday")
         friday.resize(797, 581)
