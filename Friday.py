@@ -385,7 +385,6 @@ class MainThread(QThread):
                         f"sir i an not sure, but i think we are in {city} city of {country} country")
                 except Exception as e:
                     speak("sorry sir")
-                    pass
 
             # elif "send message" in self.query:
             #     speak("What should i send?")
