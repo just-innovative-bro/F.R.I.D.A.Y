@@ -210,7 +210,8 @@ class MainThread(QThread):
 
 # speech-to-text
 
-    def takecommand(self):
+    @staticmethod
+    def takecommand():
         r = sr.Recognizer()
         with sr.Microphone() as source:
             print("Listening...")
