@@ -345,15 +345,6 @@ class MainThread(QThread):      # main
                 joke = pyjokes.get_joke()
                 speak(joke)
 
-            elif "shutdown the system" in self.query:
-                os.system("shutdown /s /t /5")
-
-            elif "restart the system" in self.query:
-                os.system("shutdown /r /t /5")
-
-            elif "sleep the system" in self.query:
-                os.system("rundll32.exe powerprof.dll,SetSuspendState 0,1,0")
-
             elif "change window" in self.query:
                 speak("switching windows")
                 pyautogui.keyDown("alt")
