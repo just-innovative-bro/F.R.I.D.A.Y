@@ -187,6 +187,7 @@ class MainThread(QThread):      # main
             print(f"User said: {query}\n")
 
         except Exception as e:
+            print(e)
             print("Say that again please...")
             return "None"
         return query
@@ -338,6 +339,7 @@ class MainThread(QThread):      # main
                     speak(
                         f"sir i an not sure, but i think we are in {city} city of {country} country")
                 except Exception as e:
+                    print(e)
                     speak("sorry sir")
 
 
