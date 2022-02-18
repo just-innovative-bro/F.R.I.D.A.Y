@@ -303,7 +303,7 @@ class MainThread(QThread):      # main
                     'I can answer to computational and geographical questions  and what question do you want to ask now')
                 question = self.takecommand().lower()
                 app_id = "your key"
-                client = wolframalpha.Client('your key')
+                client = wolframalpha.Client(app_id)
                 res = client.query(question)
                 answer = next(res.results).text
                 speak(answer)
