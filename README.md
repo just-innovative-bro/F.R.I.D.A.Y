@@ -118,6 +118,12 @@ For App_Id of [Wolfram|Aplha App id](https://www.wolframalpha.com/) follow below
 5. In the next dialog box, give the app a suitable name and description.
 6. Note down the APPID that appears in the next dialog box. This app id will be specific to the application.
 
+## News API
+1. Create account in [News API](https://newsapi.org/)
+2. click on generate API
+3. select your plan
+4. copy API key and paste in code
+
 
 ## Documentation
 1. [gTTS](https://pypi.org/project/gTTS/)
