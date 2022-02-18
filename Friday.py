@@ -157,13 +157,13 @@ def support():      # to contact suport
 
 
 def setup():        # setup audio
-    list = ["Ironman Airborne.mp3", "Iron Man Music.mp3", "Iron Man.mp3"]
-    audioplayer.AudioPlayer(random.choice(list)).play(block=True)
+    list1 = ["Ironman Airborne.mp3", "Iron Man Music.mp3", "Iron Man.mp3"]
+    audioplayer.AudioPlayer(random.choice(list1)).play(block=True)
 
 
 def intro():        # intro audio
-    list = ["Ironman Airborne.mp3", "Iron Man Music.mp3", "Iron Man.mp3"]
-    audioplayer.AudioPlayer(random.choice(list)).play(block=True)
+    list2 = ["Ironman Airborne.mp3", "Iron Man Music.mp3", "Iron Man.mp3"]
+    audioplayer.AudioPlayer(random.choice(list2)).play(block=True)
 
 
 
@@ -258,8 +258,8 @@ class MainThread(QThread):      # main
                 webbrowser.get.open(f"{cm}")
 
             elif "how are you" in self.query:
-                list = ["I'm fine, glad you me that", ""]
-                speak(random.choice(list))
+                list3 = ["I'm fine, glad you me that", ""]
+                speak(random.choice(list3))
 
             elif "i love you" in self.query:
                 speak("It's hard to understand")
