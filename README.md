@@ -58,10 +58,7 @@ ask or question - answers the asked question
 send emali - sends emali   
 where i am or where we are - tells current location  
 tell me a joke - tells jokes  
-change window - changes window  
-shut down the system - system shut down  
-restart the system - restart system  
-sleep the system - sleep system  
+change window - changes window    
 sleep now - breaks program  
 exit - program ends  
 
