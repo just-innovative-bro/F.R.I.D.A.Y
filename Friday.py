@@ -314,8 +314,8 @@ class MainThread(QThread):      # main
                 speak("What should i say")
                 self.query = self.takecommand().lower()
 
-                email = "yourmail@gmail.com"
-                password = "passcode"
+                email = input("Enter your email ID: ")
+                password = input("Enter password: ")
                 send_to_person = input("Enter the reciver ID:")
                 message = self.query
 
