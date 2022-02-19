@@ -1,6 +1,8 @@
 # F.R.I.D.A.Y.
 **Female Replacement Intelligent Digital Assistant Youth**--Friday--
- the virtual assistant made by python  
+ the virtual assistant made by python 3.9
+ 
+[![DeepSource](https://deepsource.io/gh/just-innovative-bro/F.R.I.D.A.Y.svg/?label=active+issues&show_trend=true&token=f3jHPhnaIrNqz_PueZUY74M-)](https://deepsource.io/gh/just-innovative-bro/F.R.I.D.A.Y/?ref=repository-badge)
 
 ## Overview
 This is a virtual assistant made by python named **Friday** (motivated by iron man movies)
