@@ -67,6 +67,7 @@ class Ui_friday:
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     friday = QtWidgets.QMainWindow()
     ui = Ui_friday()
