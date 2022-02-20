@@ -2,6 +2,9 @@
 **Female Replacement Intelligent Digital Assistant Youth**--Friday--
  the virtual assistant made by python 3.9
  
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Creator: Zameel](https://img.shields.io/badge/creator-Zameel-darkblue)](https://github.com/Zameel-Byte)
+
 [![DeepSource](https://deepsource.io/gh/just-innovative-bro/F.R.I.D.A.Y.svg/?label=active+issues&show_trend=true&token=f3jHPhnaIrNqz_PueZUY74M-)](https://deepsource.io/gh/just-innovative-bro/F.R.I.D.A.Y/?ref=repository-badge)
 
 ## Overview
