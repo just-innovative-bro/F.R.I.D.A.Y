@@ -8,7 +8,7 @@
 ![Creator: Naveen](https://img.shields.io/badge/creator-Naveen-darkblue)
 [![CodeFactor](https://www.codefactor.io/repository/github/just-innovative-bro/f.r.i.d.a.y/badge)](https://www.codefactor.io/repository/github/just-innovative-bro/f.r.i.d.a.y)
 ### Code editor and Environment
-![VS code](https://img.shields.io/badge/vscode-143?style=for-the-badge&logo=visualstudiocode&logoColor=blue&color=green&labelColor=black) , ![PyCharm](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green)]
+![VS code](https://img.shields.io/badge/vscode-143?style=for-the-badge&logo=visualstudiocode&logoColor=blue&color=green&labelColor=black) , ![PyCharm](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green)
 & ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 [![DeepSource](https://deepsource.io/gh/just-innovative-bro/F.R.I.D.A.Y.svg/?label=active+issues&show_trend=true&token=f3jHPhnaIrNqz_PueZUY74M-)](https://deepsource.io/gh/just-innovative-bro/F.R.I.D.A.Y/?ref=repository-badge)
