@@ -13,6 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 class UiFriday:
     """Program gui class"""
+    
     def __init__(self):
         self.pushButton_2 = None
         self.pushButton = None
