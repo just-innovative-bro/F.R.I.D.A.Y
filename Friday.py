@@ -433,7 +433,10 @@ class MainThread(QThread):      # main
             elif "exit" in self.query:
                 sys.exit()
 
-            elif 'hey' in self.query or 'hi' in self.query or 'hello' in self.query or 'ok' in self.query:
+            elif ('hey' in self.query 
+                  or 'hi' in self.query 
+                  or 'hello' in self.query 
+                  or 'ok' in self.query):
                 greetings = ["hey, how can I help you" + person_obj.name,
                              "hey, what's up?" + person_obj.name,
                              "I'm listening" + person_obj.name,
