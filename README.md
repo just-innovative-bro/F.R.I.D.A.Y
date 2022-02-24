@@ -3,13 +3,13 @@
  the virtual assistant made with [Python|3.9.7](https://www.python.org/downloads/release/python-397/)
  
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Creator: Zameel](https://img.shields.io/badge/creator-Zameel-darkblue)](https://github.com/Zameel-Byte)
-[![Creator: Subhash](https://img.shields.io/badge/creator-vijaysubhash-darkblue)](https://github.com/vijaysubhash)
-[![Creator: Naveen](https://img.shields.io/badge/creator-Naveen-darkblue)](https://github.com/Nawin14365)
+![Creator: Zameel](https://img.shields.io/badge/creator-Zameel-darkblue)
+![Creator: Subhash](https://img.shields.io/badge/creator-vijaysubhash-darkblue)
+![Creator: Naveen](https://img.shields.io/badge/creator-Naveen-darkblue)
 [![CodeFactor](https://www.codefactor.io/repository/github/just-innovative-bro/f.r.i.d.a.y/badge)](https://www.codefactor.io/repository/github/just-innovative-bro/f.r.i.d.a.y)
 ### Code editor and Environment
-[![VS code](https://img.shields.io/badge/vscode-143?style=for-the-badge&logo=visualstudiocode&logoColor=blue&color=green&labelColor=black)](https://code.visualstudio.com/) , [![PyCharm](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green)](https://www.jetbrains.com/pycharm/)
-& [![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://python.org)
+![VS code](https://img.shields.io/badge/vscode-143?style=for-the-badge&logo=visualstudiocode&logoColor=blue&color=green&labelColor=black) , ![PyCharm](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green)]
+& ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 [![DeepSource](https://deepsource.io/gh/just-innovative-bro/F.R.I.D.A.Y.svg/?label=active+issues&show_trend=true&token=f3jHPhnaIrNqz_PueZUY74M-)](https://deepsource.io/gh/just-innovative-bro/F.R.I.D.A.Y/?ref=repository-badge)
 
@@ -164,6 +164,6 @@ Pull requests are welcome. Please open an issue first to discuss what you would 
 
 Please make sure to update tests as appropriate.
 ## License
-<img src="https://img.shields.io/github/license/just-innovative-bro/F.R.I.D.A.Y">
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 [MIT](https://github.com/just-innovative-bro/F.R.I.D.A.Y/blob/main/LICENSE)
