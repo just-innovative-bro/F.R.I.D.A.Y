@@ -12,6 +12,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class UiFriday:
+    """Program gui class"""
     def __init__(self):
         self.pushButton_2 = None
         self.pushButton = None
@@ -19,6 +20,7 @@ class UiFriday:
         self.centralwidget = None
 
     def setup(self, friday):
+        """Setting up button sizes and text"""
         friday.setObjectName("friday")
         friday.resize(797, 581)
         friday.setMinimumSize(QtCore.QSize(0, 0))
@@ -64,6 +66,7 @@ class UiFriday:
         QtCore.QMetaObject.connectSlotsByName(friday)
 
     def translate(self, friday):
+        """Setting up icon and buttons"""
         _translate = QtCore.QCoreApplication.translate
         friday.setWindowTitle(_translate("friday", "FRIDAY"))
         friday.setWindowIcon(QtGui.QIcon("icon.ico"))
