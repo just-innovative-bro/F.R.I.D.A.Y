@@ -1,6 +1,6 @@
 # F.R.I.D.A.Y.
 **Female Replacement Intelligent Digital Assistant Youth**--Friday--
- the virtual assistant made with [Python | 3.9.7](https://www.python.org/downloads/release/python-397/)
+ the virtual assistant made with [Python|3.9.7](https://www.python.org/downloads/release/python-397/)
  
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Creator: Zameel](https://img.shields.io/badge/creator-Zameel-darkblue)](https://github.com/Zameel-Byte)
