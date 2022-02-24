@@ -288,7 +288,6 @@ class MainThread(QThread):      # main
                 break
 
     def main(self):        # main task execution
-        # setup()
         wish()
         while True:
             self.query = self.voicecom().lower()
