@@ -11,7 +11,7 @@ import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class UiFriday(object):
+class UiFriday:
     def __init__(self):
         self.pushButton_2 = None
         self.pushButton = None
