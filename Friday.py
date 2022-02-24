@@ -24,19 +24,17 @@ import audioplayer  # pip install audioplayer
 import wolframalpha  # pip install wolframalpha
 
 
-class Person:  # user name setting
+class Person:
     """This class is to save username and return name when needed"""
-
-    name = ""
+    name = ''
 
     def rename(self, name):
         self.name = name
 
 
-class Friday:  # assistant name setting
+class Friday:
     """This class is to save assistant name and return name when needed"""
-
-    name = ""
+    name = ''
 
     def rename(self, name):
         self.name = name
@@ -44,18 +42,18 @@ class Friday:  # assistant name setting
 
 person_obj = Person()
 friday_obj = Friday()
-Friday.name = ""
+Friday.name = ''
 person_obj.name = ""
 
 
-def speak(audio):  # to speak
+def speak(audio):
     """Google text-to-speech function"""
     tts = gTTS(audio)
-    tts.save("friday.mp3")
-    audioplayer.AudioPlayer("friday.mp3").play(block=True)
+    tts.save('friday.mp3')
+    audioplayer.AudioPlayer('friday.mp3').play(block=True)
 
 
-def wish():  # to wish
+def wish():
     """Wish with respective datetime"""
     hour = int(datetime.datetime.now().hour)
 
@@ -68,7 +66,7 @@ def wish():  # to wish
     speak("i am friday sir. please tell me how can i help you")
 
 
-def email(self):  # to email
+def email(self):
     """Sending email through voice"""
     speak("What should i say")
     self.query = self.voicecom().lower()
@@ -78,7 +76,7 @@ def email(self):  # to email
     send_to_person = input("Enter the receiver email address:")
     message = self.query
 
-    server = smtplib.SMTP("smtp.gmail.com", 587)
+    server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
     server.login(gmail, password)
     server.sendmail(gmail, send_to_person, message)
@@ -86,7 +84,8 @@ def email(self):  # to email
     speak("email has been sent to %s" % send_to_person)
 
 
-def news():  # to news api
+def news():
+    """news text from api"""
     # paste your key in the dash
     main_url = "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=f6c14e2cab554378974887255cff7a09"
     main_page = requests.get(main_url).json()
@@ -110,7 +109,8 @@ def news():  # to news api
         speak(f"today's {day[i]} news is: {head[i]}")
 
 
-def days():  # to tell day
+def days():
+    """returns present day"""
 
     day = datetime.datetime.today().weekday() + 1
 
@@ -130,7 +130,8 @@ def days():  # to tell day
         speak("The day is " + day_of_the_week)
 
 
-def date():  # to tell date
+def date():
+    """returns present date"""
     year = int(datetime.datetime.now().year)
     month = int(datetime.datetime.now().month)
     date1 = int(datetime.datetime.now().day)
@@ -140,15 +141,16 @@ def date():  # to tell date
     speak(year)
 
 
-def screenshot():  # to take screenshot
+def screenshot():
+    """takes screenshot"""
     img = pyautogui.screenshot()
     img.save("screen.png")
 
 
-def ask(self):  # to ask
+def ask(self):
+    """solve maths problems though voice"""
     speak(
-        "I can answer to computational and geographical questions  and what question do you want to ask now"
-    )
+        'I can answer to computational and geographical questions  and what question do you want to ask now')
     question = self.voicecom().lower()
     app_id = "QTLYH7-4UV274RV6V"
     client = wolframalpha.Client(app_id)
@@ -159,19 +161,22 @@ def ask(self):  # to ask
 
 
 def calender():
+    """opens google calender"""
     url = "https://calendar.google.com/calendar/u/0/r?tab=rc"
     webbrowser.get().open(url)
 
 
-def note(self):  # to write txt file
+def note(self):
+    """writes voice note"""
     speak("What should i write, sir")
     notes = self.voicecom()
-    with open("friday.txt", "w") as file:
+    with open('friday.txt', 'w') as file:
         file.write(notes)
         file.close()
 
 
-def wiki(self):  # wiki search summary
+def wiki(self):
+    """wiki summary search"""
     speak("searching wikipedia")
     self.query = self.query.replace("wikipedia")
     result = wikipedia.summary(self.query, sentence=2)
@@ -180,19 +185,22 @@ def wiki(self):  # wiki search summary
     print(result)
 
 
-def read_note():  # to read txt file
+def read_note():
+    """reads voice note"""
     speak("Showing Notes")
-    with open("friday.txt", "r") as file:
+    with open('friday.txt', 'r') as file:
         read = file.read()
         speak(read)
 
 
-def ip():  # to find ip address
-    ips = get("https://api.ipify.org").text
+def ip():
+    """returns ip address of your"""
+    ips = get('https://api.ipify.org').text
     speak(f"your ip address is {ips}")
 
 
-def cpu():  # to cpu stats
+def cpu():
+    """cpu stats"""
     usage = str(psutil.cpu_percent())
     speak("CPU is at" + usage)
     battery = psutil.sensors_battery()
@@ -201,10 +209,11 @@ def cpu():  # to cpu stats
     percent = str(battery.percent)
     plugged = "Plugged In" if plugged else "Not Plugged In"
     speak("battery is at ")
-    speak(percent + "% | " + plugged)
+    speak(percent+'% | '+plugged)
 
 
-def cam():  # to camera
+def cam():
+    """opens camera"""
     video_capture = cv2.VideoCapture(0)
 
     cv2.namedWindow("Face cam")
@@ -214,22 +223,24 @@ def cam():  # to camera
         cv2.imshow("Face cam", frame)
 
         # This breaks on 'q' key
-        if cv2.waitKey(1) & 0xFF == ord("q"):
+        if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
     video_capture.release()
     cv2.destroyAllWindows()
 
 
-def stock(self):  # stock search
+def stock(self):
+    """stock market search google"""
     search_term = self.query.split("for")[-1]
     url = "https://google.com/search?q=" + search_term
     webbrowser.get().open(url)
     speak("Here is what I found for " + search_term + " on google")
 
 
-def pdf_reader():  # to read pdf
-    book = open(input("enter path to pdf:"), "rb")
+def pdf_reader():
+    """pdf reader"""
+    book = open(input("enter path to pdf:"), 'rb')
     pdfreader = PyPDF2.PdfFileReader(book)
     pages = pdfreader.getNumPages()
     speak(f"total number of pages in this book {pages}")
@@ -240,31 +251,39 @@ def pdf_reader():  # to read pdf
     speak(text)
 
 
-def support():  # to contact support
+def support():
+    """software support link"""
     url = "https://github.com/https-github-com-zameel28/F.R.I.D.A.Y"
     webbrowser.get().open(url)
 
 
-def setup():  # setup audio
+def setup():
+    """setup audio"""
     list1 = ["Ironman Airborne.mp3", "Iron Man Music.mp3", "Iron Man.mp3"]
     audioplayer.AudioPlayer(random.choice(list1)).play(block=True)
 
 
-def intro():  # intro audio
+def intro():
+    """intro audio"""
     list2 = ["Ironman Airborne.mp3", "Iron Man Music.mp3", "Iron Man.mp3"]
     audioplayer.AudioPlayer(random.choice(list2)).play(block=True)
 
 
-class MainThread(QThread):  # main
+class MainThread(QThread):      # main
+    """main class"""
+
     def __init__(self, parent=None):
+        """self.query field"""
         super().__init__(parent)
         self.query = None
 
     def run(self):
+        """running main"""
         self.main()
 
     @staticmethod
-    def voicecom():  # speech-to-text
+    def voicecom():      # speech-to-text
+        """converts text to speach"""
         r = sr.Recognizer()
         with sr.Microphone() as source:
             print("Listening...")
@@ -273,7 +292,7 @@ class MainThread(QThread):  # main
 
         try:
             print("Recognizing...")
-            query = r.recognize_google(audio, language="en-in")
+            query = r.recognize_google(audio, language='en-in')
             print(f"User said: {query}\n")
 
         except Exception as e:
@@ -283,13 +302,16 @@ class MainThread(QThread):  # main
         return query
 
     def null(self):
+        """empty function"""
         while True:
             self.query = self.voicecom().lower()
             if "friday" in self.query:
                 speak("ready")
                 break
 
-    def main(self):  # main task execution
+    def main(self):        # main task execution
+        """the main function"""
+        # setup()
         wish()
         while True:
             self.query = self.voicecom().lower()
@@ -307,14 +329,14 @@ class MainThread(QThread):  # main
             elif "ip address" in self.query:
                 ip()
 
-            elif "introduce yourself" in self.query:
+            elif 'introduce yourself' in self.query:
                 intro()
                 speak("I am created by Zameel ali, Subhash and Naveen")
                 speak("I was made by using python")
                 speak("i am born on 11th oct 2021")
                 speak("hope you got the information")
 
-            elif "time" in self.query:
+            elif 'time' in self.query:
                 stripe = datetime.datetime.now().strftime("%H:%M")
                 speak(f"Sir, the time is {stripe}")
 
@@ -330,9 +352,8 @@ class MainThread(QThread):  # main
 
             elif "open youtube" in self.query:
                 search_term = self.query.split("for")[-1]
-                search_term = search_term.replace("open youtube", "").replace(
-                    "search", ""
-                )
+                search_term = search_term.replace(
+                    "open youtube", "").replace("search", "")
                 url = "https://www.youtube.com/results?search_query=" + search_term
                 webbrowser.get().open(url)
                 speak("Here is what I found for " + search_term + "on youtube")
@@ -366,11 +387,12 @@ class MainThread(QThread):  # main
                 search_term = self.query.split("to")[-1]
                 url = "https://www.google.co.in/maps/dir/" + search_term
                 webbrowser.get().open(url)
-                speak("Here is what I found for" + search_term + "on google maps")
+                speak("Here is what I found for" +
+                      search_term + "on google maps")
 
             # add more url
 
-            elif "ask" in self.query or "question" in self.query:
+            elif 'ask' in self.query or "question" in self.query:
                 ask(self)
 
             elif "send email" in self.query:
@@ -411,34 +433,29 @@ class MainThread(QThread):  # main
             elif "exit" in self.query:
                 sys.exit()
 
-            elif (
-                "hey" in self.query
-                or "hi" in self.query
-                or "hello" in self.query
-                or "ok" in self.query
-            ):
-                greetings = [
-                    "hey, how can I help you" + person_obj.name,
-                    "hey, what's up?" + person_obj.name,
-                    "I'm listening" + person_obj.name,
-                    "how can I help you?" + person_obj.name,
-                    "hello" + person_obj.name,
-                ]
-                greet = greetings[random.randint(0, len(greetings) - 1)]
+            elif 'hey' in self.query or 'hi' in self.query or 'hello' in self.query or 'ok' in self.query:
+                greetings = ["hey, how can I help you" + person_obj.name,
+                             "hey, what's up?" + person_obj.name,
+                             "I'm listening" + person_obj.name,
+                             "how can I help you?" + person_obj.name,
+                             "hello" + person_obj.name]
+                greet = greetings[random.randint(0, len(greetings)-1)]
                 speak(greet)
 
-            elif (
-                "what is your name" in self.query
-                or "what's your name" in self.query
-                or "tell me your name" in self.query
-            ):
+            elif ("what is your name"
+                  in self.query or
+                  "what's your name"
+                  in self.query or
+                  "tell me your name"
+                  in self.query):
 
                 if person_obj.name:
                     # gets users name from voice input
                     speak(f"My name is {friday.name}, {person_obj.name}")
                 else:
                     # in case you haven't provided your name.
-                    speak(f"My name is {friday_obj.name}. what's your name sir?")
+                    speak(
+                        f"My name is {friday_obj.name}. what's your name sir?")
 
             elif "my name is" in self.query:
                 person_name = self.query.split("is")[-1].strip()
@@ -456,7 +473,8 @@ class MainThread(QThread):  # main
                 friday.rename(self, friday_name)
 
             elif "how are you" in self.query or "how are you doing" in self.query:
-                speak("I'm very well, thanks for asking " + person_obj.name + "sir")
+                speak("I'm very well, thanks for asking " +
+                      person_obj.name + "sir")
 
             elif "toss coin" in self.query or "flip coin" in self.query:
                 moves = ["head", "tails"]
@@ -480,7 +498,6 @@ class Main(QMainWindow):
         self.ui.label.setMovie(self.ui.movie)
         self.ui.movie.start()
         startExecution.start()
-
 
 # the UI
 
