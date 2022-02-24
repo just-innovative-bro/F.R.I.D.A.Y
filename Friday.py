@@ -436,10 +436,10 @@ class MainThread(QThread):  # main
                 sys.exit()
 
             elif (
-                    "hey" in self.query
-                    or "hi" in self.query
-                    or "hello" in self.query
-                    or "ok" in self.query
+                "hey" in self.query
+                or "hi" in self.query
+                or "hello" in self.query
+                or "ok" in self.query
             ):
                 greetings = [
                     "hey, how can I help you" + person_obj.name,
@@ -452,9 +452,9 @@ class MainThread(QThread):  # main
                 speak(greet)
 
             elif (
-                    "what is your name" in self.query
-                    or "what's your name" in self.query
-                    or "tell me your name" in self.query
+                "what is your name" in self.query
+                or "what's your name" in self.query
+                or "tell me your name" in self.query
             ):
 
                 if person_obj.name:
