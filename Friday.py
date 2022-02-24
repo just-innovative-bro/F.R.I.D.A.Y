@@ -30,6 +30,7 @@ class Person:
     name = ""
 
     def rename(self, name):
+        """Declaring"""
         self.name = name
 
 
@@ -39,6 +40,7 @@ class Friday:
     name = ""
 
     def rename(self, name):
+        """Declaring"""
         self.name = name
 
 
@@ -436,10 +438,10 @@ class MainThread(QThread):  # main
                 sys.exit()
 
             elif (
-                "hey" in self.query
-                or "hi" in self.query
-                or "hello" in self.query
-                or "ok" in self.query
+                    "hey" in self.query
+                    or "hi" in self.query
+                    or "hello" in self.query
+                    or "ok" in self.query
             ):
                 greetings = [
                     "hey, how can I help you" + person_obj.name,
@@ -452,9 +454,9 @@ class MainThread(QThread):  # main
                 speak(greet)
 
             elif (
-                "what is your name" in self.query
-                or "what's your name" in self.query
-                or "tell me your name" in self.query
+                    "what is your name" in self.query
+                    or "what's your name" in self.query
+                    or "tell me your name" in self.query
             ):
 
                 if person_obj.name:
@@ -502,6 +504,7 @@ class Main(QMainWindow):
         self.ui.pushButton_2.clicked.connect(self.close)
 
     def start(self):
+        """Background gif play"""
         self.ui.movie = QtGui.QMovie("untitled-6.gif")
         self.ui.label.setMovie(self.ui.movie)
         self.ui.movie.start()
