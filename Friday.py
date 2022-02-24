@@ -112,7 +112,7 @@ def news():
 
 
 def days():
-    """returns present day"""
+    """returns"""
     day = datetime.datetime.today().weekday() + 1
 
     day_dict = {
@@ -132,7 +132,7 @@ def days():
 
 
 def date():
-    """returns present date"""
+    """returns"""
     year = int(datetime.datetime.now().year)
     month = int(datetime.datetime.now().month)
     date1 = int(datetime.datetime.now().day)
@@ -143,13 +143,13 @@ def date():
 
 
 def screenshot():
-    """takes screenshot"""
+    """takes snapshot"""
     img = pyautogui.screenshot()
     img.save("screen.png")
 
 
 def ask(self):
-    """solve maths problems though voice"""
+    """solve"""
     speak(
         "I can answer to computational and geographical questions  and what question do you want to ask now"
     )
@@ -163,7 +163,7 @@ def ask(self):
 
 
 def calender():
-    """opens google calender"""
+    """opens link"""
     url = "https://calendar.google.com/calendar/u/0/r?tab=rc"
     webbrowser.get().open(url)
 
@@ -178,7 +178,7 @@ def note(self):
 
 
 def wiki(self):
-    """wiki summary search"""
+    """summary search"""
     speak("searching wikipedia")
     self.query = self.query.replace("wikipedia")
     result = wikipedia.summary(self.query, sentence=2)
@@ -188,7 +188,7 @@ def wiki(self):
 
 
 def read_note():
-    """reads voice note"""
+    """voice note"""
     speak("Showing Notes")
     with open("friday.txt", "r") as file:
         read = file.read()
@@ -196,13 +196,13 @@ def read_note():
 
 
 def ip():
-    """returns ip address of your"""
+    """returns Internet Protocol address"""
     ips = get("https://api.ipify.org").text
     speak(f"your ip address is {ips}")
 
 
 def cpu():
-    """cpu stats"""
+    """stats"""
     usage = str(psutil.cpu_percent())
     speak("CPU is at" + usage)
     battery = psutil.sensors_battery()
@@ -215,7 +215,7 @@ def cpu():
 
 
 def cam():
-    """opens camera"""
+    """opens front webcam"""
     video_capture = cv2.VideoCapture(0)
 
     cv2.namedWindow("Face cam")
@@ -233,7 +233,7 @@ def cam():
 
 
 def stock(self):
-    """stock market search google"""
+    """market search google"""
     search_term = self.query.split("for")[-1]
     url = "https://google.com/search?q=" + search_term
     webbrowser.get().open(url)
@@ -241,7 +241,7 @@ def stock(self):
 
 
 def pdf_reader():
-    """pdf reader"""
+    """reader"""
     book = open(input("enter path to pdf:"), "rb")
     pdfreader = PyPDF2.PdfFileReader(book)
     pages = pdfreader.getNumPages()
@@ -254,19 +254,19 @@ def pdf_reader():
 
 
 def support():
-    """software support link"""
+    """software contact link"""
     url = "https://github.com/https-github-com-zameel28/F.R.I.D.A.Y"
     webbrowser.get().open(url)
 
 
 def setup():
-    """setup audio"""
+    """start up audio"""
     list1 = ["Ironman Airborne.mp3", "Iron Man Music.mp3", "Iron Man.mp3"]
     audioplayer.AudioPlayer(random.choice(list1)).play(block=True)
 
 
 def intro():
-    """intro audio"""
+    """introduction audio"""
     list2 = ["Ironman Airborne.mp3", "Iron Man Music.mp3", "Iron Man.mp3"]
     audioplayer.AudioPlayer(random.choice(list2)).play(block=True)
 
@@ -280,12 +280,12 @@ class MainThread(QThread):  # main
         self.query = None
 
     def run(self):
-        """running main"""
+        """running thread"""
         self.main()
 
     @staticmethod
     def voicecom():  # speech-to-text
-        """converts text to speach"""
+        """recognize"""
         r = sr.Recognizer()
         with sr.Microphone() as source:
             print("Listening...")
@@ -304,7 +304,7 @@ class MainThread(QThread):  # main
         return query
 
     def null(self):
-        """empty function"""
+        """trigger function"""
         while True:
             self.query = self.voicecom().lower()
             if "friday" in self.query:
@@ -312,7 +312,7 @@ class MainThread(QThread):  # main
                 break
 
     def main(self):  # main task execution
-        """the main function"""
+        """the original task"""
         # setup()
         wish()
         while True:
@@ -436,10 +436,10 @@ class MainThread(QThread):  # main
                 sys.exit()
 
             elif (
-                "hey" in self.query
-                or "hi" in self.query
-                or "hello" in self.query
-                or "ok" in self.query
+                    "hey" in self.query
+                    or "hi" in self.query
+                    or "hello" in self.query
+                    or "ok" in self.query
             ):
                 greetings = [
                     "hey, how can I help you" + person_obj.name,
@@ -452,9 +452,9 @@ class MainThread(QThread):  # main
                 speak(greet)
 
             elif (
-                "what is your name" in self.query
-                or "what's your name" in self.query
-                or "tell me your name" in self.query
+                    "what is your name" in self.query
+                    or "what's your name" in self.query
+                    or "tell me your name" in self.query
             ):
 
                 if person_obj.name:
