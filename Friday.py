@@ -315,7 +315,7 @@ class MainThread(QThread):  # main
 
     def main(self):  # main task execution
         """The original task"""
-        # setup()
+        setup()
         wish()
         while True:
             self.query = self.voicecom().lower()
