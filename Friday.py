@@ -111,7 +111,6 @@ def news():
 
 def days():
     """returns present day"""
-
     day = datetime.datetime.today().weekday() + 1
 
     day_dict = {
