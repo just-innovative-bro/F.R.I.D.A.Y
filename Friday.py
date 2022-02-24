@@ -87,7 +87,7 @@ def email(self):
 
 
 def news():
-    """news text from api"""
+    """News text from api"""
     # paste your key in the dash
     main_url = "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=f6c14e2cab554378974887255cff7a09"
     main_page = requests.get(main_url).json()
@@ -112,7 +112,7 @@ def news():
 
 
 def days():
-    """returns"""
+    """Returns present day"""
     day = datetime.datetime.today().weekday() + 1
 
     day_dict = {
@@ -132,7 +132,7 @@ def days():
 
 
 def date():
-    """returns"""
+    """Returns present date"""
     year = int(datetime.datetime.now().year)
     month = int(datetime.datetime.now().month)
     date1 = int(datetime.datetime.now().day)
@@ -143,13 +143,13 @@ def date():
 
 
 def screenshot():
-    """takes snapshot"""
+    """Takes snapshot"""
     img = pyautogui.screenshot()
     img.save("screen.png")
 
 
 def ask(self):
-    """solve"""
+    """Solve"""
     speak(
         "I can answer to computational and geographical questions  and what question do you want to ask now"
     )
@@ -163,13 +163,13 @@ def ask(self):
 
 
 def calender():
-    """opens link"""
+    """Opens link"""
     url = "https://calendar.google.com/calendar/u/0/r?tab=rc"
     webbrowser.get().open(url)
 
 
 def note(self):
-    """writes voice note"""
+    """Writes voice note"""
     speak("What should i write, sir")
     notes = self.voicecom()
     with open("friday.txt", "w") as file:
@@ -178,7 +178,7 @@ def note(self):
 
 
 def wiki(self):
-    """summary search"""
+    """Summary search"""
     speak("searching wikipedia")
     self.query = self.query.replace("wikipedia")
     result = wikipedia.summary(self.query, sentence=2)
@@ -188,7 +188,7 @@ def wiki(self):
 
 
 def read_note():
-    """voice note"""
+    """Voice note"""
     speak("Showing Notes")
     with open("friday.txt", "r") as file:
         read = file.read()
@@ -196,13 +196,13 @@ def read_note():
 
 
 def ip():
-    """returns Internet Protocol address"""
+    """Returns Internet Protocol address"""
     ips = get("https://api.ipify.org").text
     speak(f"your ip address is {ips}")
 
 
 def cpu():
-    """stats"""
+    """Stats"""
     usage = str(psutil.cpu_percent())
     speak("CPU is at" + usage)
     battery = psutil.sensors_battery()
@@ -215,7 +215,7 @@ def cpu():
 
 
 def cam():
-    """opens front webcam"""
+    """Opens front webcam"""
     video_capture = cv2.VideoCapture(0)
 
     cv2.namedWindow("Face cam")
@@ -233,7 +233,7 @@ def cam():
 
 
 def stock(self):
-    """market search google"""
+    """Market search google"""
     search_term = self.query.split("for")[-1]
     url = "https://google.com/search?q=" + search_term
     webbrowser.get().open(url)
@@ -241,7 +241,7 @@ def stock(self):
 
 
 def pdf_reader():
-    """reader"""
+    """Reader"""
     book = open(input("enter path to pdf:"), "rb")
     pdfreader = PyPDF2.PdfFileReader(book)
     pages = pdfreader.getNumPages()
@@ -254,25 +254,25 @@ def pdf_reader():
 
 
 def support():
-    """software contact link"""
+    """Software contact link"""
     url = "https://github.com/https-github-com-zameel28/F.R.I.D.A.Y"
     webbrowser.get().open(url)
 
 
 def setup():
-    """start up audio"""
+    """Start up audio"""
     list1 = ["Ironman Airborne.mp3", "Iron Man Music.mp3", "Iron Man.mp3"]
     audioplayer.AudioPlayer(random.choice(list1)).play(block=True)
 
 
 def intro():
-    """introduction audio"""
+    """Introduction audio"""
     list2 = ["Ironman Airborne.mp3", "Iron Man Music.mp3", "Iron Man.mp3"]
     audioplayer.AudioPlayer(random.choice(list2)).play(block=True)
 
 
 class MainThread(QThread):  # main
-    """main class"""
+    """Main class"""
 
     def __init__(self, parent=None):
         """self.query field"""
@@ -280,12 +280,12 @@ class MainThread(QThread):  # main
         self.query = None
 
     def run(self):
-        """running thread"""
+        """Running thread"""
         self.main()
 
     @staticmethod
     def voicecom():  # speech-to-text
-        """recognize"""
+        """Recognize"""
         r = sr.Recognizer()
         with sr.Microphone() as source:
             print("Listening...")
@@ -304,7 +304,7 @@ class MainThread(QThread):  # main
         return query
 
     def null(self):
-        """trigger function"""
+        """Trigger function"""
         while True:
             self.query = self.voicecom().lower()
             if "friday" in self.query:
@@ -312,7 +312,7 @@ class MainThread(QThread):  # main
                 break
 
     def main(self):  # main task execution
-        """the original task"""
+        """The original task"""
         # setup()
         wish()
         while True:
@@ -492,7 +492,7 @@ startExecution = MainThread()
 
 
 class Main(QMainWindow):
-    """program gui thread"""
+    """Program gui thread"""
 
     def __init__(self):
         super().__init__()
