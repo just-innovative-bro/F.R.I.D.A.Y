@@ -13,7 +13,7 @@
 
 ### Active issues and Tests
 
-[![DeepSource](https://deepsource.io/gh/just-innovative-bro/F.R.I.D.A.Y.svg/?label=active+issues&show_trend=true&token=f3jHPhnaIrNqz_PueZUY74M-)](https://deepsource.io/gh/just-innovative-bro/F.R.I.D.A.Y/?ref=repository-badge)
+[![DeepSource](https://deepsource.io/gh/just-innovative-bro/F.R.I.D.A.Y.svg/?label=active+issues&show_trend=true&token=f3jHPhnaIrNqz_PueZUY74M-)](https://deepsource.io/gh/just-innovative-bro/F.R.I.D.A.Y/?ref=repository-badge)  [![CodeQL](https://github.com/just-innovative-bro/F.R.I.D.A.Y/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/just-innovative-bro/F.R.I.D.A.Y/actions/workflows/codeql-analysis.yml)
 
 ## Overview
 This is a virtual assistant made by python named **Friday** (motivated by iron man movies)
