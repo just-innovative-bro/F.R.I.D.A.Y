@@ -36,7 +36,7 @@ jobs:
         pip install PyPDF2
         pip install PyQt5
         pip install opencv-python
-        pip install pycopy-webbrowser
+        pip install webbrowser
         pip install pyjokes
         pip install psutil
         pip install PyAudio-0.2.11-cp39-cp39-win_amd64.whl
