@@ -17,8 +17,8 @@ import psutil  # pip install psutil
 import PyPDF2  # pip install PyPDF2
 from pywikihow import search_wikihow  # pip install pywikihow
 from PyQt5 import QtGui  # pip install PyQt5
-from PyQt5.QtCore import *
-from PyQt5.QtWidgets import *
+from PyQt5.QtCore import QThread
+from PyQt5.QtWidgets import QMainWindow, QApplication
 from FridayUI import UiFriday  # from the UI program
 import audioplayer  # pip install audioplayer
 import wolframalpha  # pip install wolframalpha
