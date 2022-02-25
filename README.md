@@ -11,6 +11,8 @@
 [![VS code](https://img.shields.io/badge/vscode-143?style=for-the-badge&logo=visualstudiocode&logoColor=blue&color=green&labelColor=black)](https://code.visualstudio.com/) , [![PyCharm](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green)](https://www.jetbrains.com/pycharm/)
 & [![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://www.python.org/)
 
+### Active issues and Tests
+
 [![DeepSource](https://deepsource.io/gh/just-innovative-bro/F.R.I.D.A.Y.svg/?label=active+issues&show_trend=true&token=f3jHPhnaIrNqz_PueZUY74M-)](https://deepsource.io/gh/just-innovative-bro/F.R.I.D.A.Y/?ref=repository-badge)
 
 ## Overview
