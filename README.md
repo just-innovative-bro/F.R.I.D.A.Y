@@ -110,6 +110,7 @@ pip install opencv-python
 pip install pycopy-webbrowser
 pip install pyjokes
 pip install psutil
+pip install PyAudio
 ```
 for PyAudio if there is any problem in installing use this [click here](https://www.lfd.uci.edu/~gohlke/pythonlibs/) and search PyAudio and install
 or use this youtube video [click here](https://www.youtube.com/watch?v=-3am_5jMzJ4&t=307s)                                                                              
@@ -157,6 +158,7 @@ For App_Id of [Wolfram|Aplha App id](https://www.wolframalpha.com/) follow below
 12. [openCV](https://pypi.org/project/opencv-python/)
 13. [Webbrowser](https://pypi.org/project/pycopy-webbrowser/)
 14. [Psutill](https://pypi.org/project/psutil/)
+15. [Pyaudio](https://pypi.org/project/PyAudio/)
 
 
 ## Contributing
