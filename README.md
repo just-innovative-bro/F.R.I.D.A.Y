@@ -167,6 +167,15 @@ Pull requests are welcome. Please open an issue first to discuss what you would 
 ![Your Repository's Stats](https://contrib.rocks/image?repo=just-innovative-bro/F.R.I.D.A.Y)
 
 Please make sure to update tests as appropriate.
+
+## Qualities we are performing:-
+1. Addig Neurallints.
+2. Developing new gui.
+3. Reducing complexity.
+4. Adding Newer features.
+5. Reducing Bugs and outerscope variables.
+
+
 ## License
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
