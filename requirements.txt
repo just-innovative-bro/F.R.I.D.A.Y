@@ -1,4 +1,4 @@
-﻿absl-py==1.0.0
+absl-py==1.0.0
 appdirs==1.4.4
 astunparse==1.6.3
 attrs==21.4.0
@@ -41,7 +41,7 @@ protobuf==3.19.4
 psutil==5.9.1
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-sounddevice==0.4.4
+Pyaudio==0.2.11
 PyAutoGUI==0.9.53
 PyGetWindow==0.0.9
 pyjokes==0.6.0
