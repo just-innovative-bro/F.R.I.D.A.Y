@@ -1,0 +1,93 @@
+{"intents":
+[
+    {
+        "tag": "greetings",
+        "patterns": ["Hey", "Hello", "What's up?", "Hi", "Good day"],
+        "responses": ["Hello sir", "Hello, What can i do for you?"]
+    },
+    {
+        "tag": "open_cmd",
+        "patterns": ["open cmd", "open console", "open terminal"],
+        "responses": ["opening cmd", "opening console", "opening terminal"]
+    },
+    {
+        "tag": "calendar",
+        "patterns": ["open calender","open calendar", "show date", "show day"],
+        "responses": ["opening calender"]
+    },
+    {
+        "tag": "open_google",
+        "patterns": ["open chrome", "open google", "google it"],
+        "responses": [""]
+    },
+    {
+        "tag": "search_google",
+        "patterns": ["search google", "search for"],
+        "responses": [""]
+    },
+    {
+        "tag":"i_love_you",
+        "patterns": ["i love you", "i love you friday", "love you", "love you friday"],
+        "responses": ["i love you too", "i love you too {user}"]
+    },
+    {
+        "tag": "tell_date",
+        "patterns": ["tell date", "tell day","tell time"],
+        "responses": [""]
+    },
+    {
+        "tag": "open_cam",
+        "patterns": ["open cam", "open camera", "open web cam", "open web camera"],
+        "responses": ["opening camera", "open web cam"]
+    },
+    {
+        "tag": "support",
+        "patterns": ["support", "contact support"],
+        "responses": [""]
+    },
+    {
+        "tag": "wikipedia_search",
+        "patterns": ["wikipedia search", "wikipedia about"],
+        "responses": [""]
+    },
+    {
+        "tag": "write_note",
+        "patterns": ["write a note", "note","note the point"],
+        "responses": [""]
+    },
+    {
+        "tag": "support",
+        "patterns": ["contact", "support", "help"],
+        "responses": [""]
+    },
+    {
+        "tag": "intro",
+        "patterns": ["intro","introduce yourself","tell yourself"],
+        "responses": [""]
+    },
+    {
+        "tag": "wish",
+        "patterns": ["wish me","wishme"],
+        "responses": [""]
+    },
+    {
+        "tag": "pdf_reader",
+        "patterns": ["read pdf","extract pdf","open pdf"],
+        "responses": [""]
+    },
+    {
+        "tag": "jokes",
+        "patterns": ["tell joke","joke","jokes","tell jokes"],
+        "responses":[""]
+    },
+    {
+        "tag": "quote",
+        "patterns": ["tell quote", "quotes","tell some motivational quotes"],
+        "responses": [""]
+    },
+    {
+        "tag": "news",
+        "patterns": ["tell news", "news", "today's headlines", "tech news", "hot news"],
+        "responses": [""]
+    }
+]}

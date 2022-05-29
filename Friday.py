@@ -4,7 +4,7 @@ from gtts import gTTS  # pip install gTTS
 import requests
 import speech_recognition as sr  # pip install speechRecognition
 import datetime
-import time
+# import time
 import cv2  # pip install opencv-python
 import random
 from requests import get
@@ -22,6 +22,8 @@ from PyQt5.QtWidgets import QMainWindow, QApplication
 from FridayUI import UiFriday  # from the UI program
 import audioplayer  # pip install audioplayer
 import wolframalpha  # pip install wolframalpha
+from neuralintents import GenericAssistant
+from quote import quote
 
 
 class Person:
@@ -70,6 +72,11 @@ def wish():
     speak("i am friday sir. please tell me how can i help you")
 
 
+def jokes():
+    joke = pyjokes.get_joke()
+    speak(joke)
+
+
 def email(self):
     """Sending email through voice"""
     speak("What should i say")
@@ -86,6 +93,13 @@ def email(self):
     server.sendmail(gmail, send_to_person, message)
     server.quit()
     speak("email has been sent to %s" % send_to_person)
+
+
+def quotes():
+    search = 'Jasper Fforde'
+    result = quote(search, limit=1)
+    print(result)
+    speak(result)
 
 
 def news():
@@ -197,6 +211,10 @@ def read_note():
         speak(read)
 
 
+def cmd():
+    os.system("start cmd")
+
+
 def ip():
     """Returns Internet Protocol address"""
     ips = get("https://api.ipify.org").text
@@ -223,7 +241,7 @@ def cam():
     cv2.namedWindow("Face cam")
 
     while True:
-        _ret, frame = video_capture.read()
+        ret, frame = video_capture.read()
         cv2.imshow("Face cam", frame)
 
         # This breaks on 'q' key
@@ -255,10 +273,50 @@ def pdf_reader():
     speak(text)
 
 
+def time_now():
+    stripe = datetime.datetime.now().strftime("%H:%M")
+    speak(f"Sir, the time is {stripe}")
+
+
 def support():
     """Software contact link"""
     url = "https://github.com/https-github-com-zameel28/F.R.I.D.A.Y"
     webbrowser.get().open(url)
+
+
+def youtube(self):
+    search_term = self.query.split("for")[-1]
+    search_term = search_term.replace("open youtube", "").replace(
+        "search", ""
+    )
+    url = "https://www.youtube.com/results?search_query=" + search_term
+    webbrowser.get().open(url)
+    speak("Here is what I found for " + search_term + "on youtube")
+
+
+def google(self):
+    speak("sir, what should i search")
+    search_term = self.query.split("to")[-1]
+    url = "https://www.google.co.in/search?q=" + search_term
+    webbrowser.get().open(url)
+
+
+def route_to(self):
+    search_term = self.query.split("to")[-1]
+    url = "https://www.google.co.in/maps/dir/" + search_term
+    webbrowser.get().open(url)
+    speak("Here is what I found for" + search_term + "on google maps")
+
+
+def wiki_step_mode(self):
+    speak("activated how to do mode")
+    how = self.voicecom()
+    max_result = 1
+    how_to = search_wikihow(how, max_result)
+    if len(how_to) != 1:
+        raise AssertionError
+    how_to[0].print()
+    speak(how_to[0].summary)
 
 
 def setup():
@@ -271,6 +329,26 @@ def intro():
     """Introduction audio"""
     list2 = ["Ironman Airborne.mp3", "Iron Man Music.mp3", "Iron Man.mp3"]
     audioplayer.AudioPlayer(random.choice(list2)).play(block=True)
+
+
+mappings = {
+    "calendar": calender,
+    "write_note": note,
+    "greetings": wish,
+    "tell_date": date,
+    "open_cam": cam,
+    "support": support,
+    "setup": setup,
+    "into": intro,
+    "wish": wish,
+    "pdf_reader": pdf_reader,
+    "jokes": jokes,
+    "quote": quotes,
+    "open_cmd": cmd,
+    "news": news
+}
+assistant = GenericAssistant("intents.json", intent_methods=mappings)
+assistant.train_model()
 
 
 class MainThread(QThread):  # main
@@ -315,179 +393,159 @@ class MainThread(QThread):  # main
 
     def main(self):  # main task execution
         """The original task"""
-        setup()
+        # setup()
         wish()
         while True:
             self.query = self.voicecom().lower()
-
-            if "open calender" in self.query:
-                calender()
-                self.null()
-
-            elif "open command prompt" in self.query:
-                os.system("start cmd")
-
-            elif "open camera" in self.query:
-                cam()
-
-            elif "ip address" in self.query:
-                ip()
-
-            elif "introduce yourself" in self.query:
-                intro()
-                speak("I am created by Zameel ali, Subhash and Naveen")
-                speak("I was made by using python")
-                speak("i am born on 11th oct 2021")
-                speak("hope you got the information")
-
-            elif "time" in self.query:
-                stripe = datetime.datetime.now().strftime("%H:%M")
-                speak(f"Sir, the time is {stripe}")
-
-            elif "take a screenshot" in self.query:
-                screenshot()
-                speak("Done!")
-
-            elif "support" in self.query:
-                support()
-
-            elif "stock price of" in self.query:
-                stock(self)
-
-            elif "open youtube" in self.query:
-                search_term = self.query.split("for")[-1]
-                search_term = search_term.replace("open youtube", "").replace(
-                    "search", ""
-                )
-                url = "https://www.youtube.com/results?search_query=" + search_term
-                webbrowser.get().open(url)
-                speak("Here is what I found for " + search_term + "on youtube")
-
-            elif "wikipedia" in self.query:
-                wiki(self)
-
-            elif "search google" in self.query:
-                speak("sir, what should i search")
-                search_term = self.query.split("to")[-1]
-                url = "https://www.google.co.in/search?q=" + search_term
-                webbrowser.get().open(url)
-
-            elif "how are you" in self.query:
-                list3 = ["I'm fine, glad you me that", ""]
-                speak(random.choice(list3))
-
-            elif "i love you" in self.query:
-                speak("It's hard to understand")
-
-            elif "write a note" in self.query:
-                note(self)
-
-            elif "day" in self.query:
-                days()
-
-            elif "show note" in self.query:
-                read_note()
-
-            elif "route to" in self.query:
-                search_term = self.query.split("to")[-1]
-                url = "https://www.google.co.in/maps/dir/" + search_term
-                webbrowser.get().open(url)
-                speak("Here is what I found for" + search_term + "on google maps")
-
-            # add more url
-
-            elif "ask" in self.query or "question" in self.query:
-                ask(self)
-
-            elif "send email" in self.query:
-                email(self)
-
-            elif "tell me a joke" in self.query:
-                joke = pyjokes.get_joke()
-                speak(joke)
-
-            elif "change window" in self.query:
-                speak("switching windows")
-                pyautogui.keyDown("alt")
-                pyautogui.keyDown("tab")
-                time.sleep(1)
-                pyautogui.keyUp("alt")
-
-            elif "tell me news" in self.query:
-                speak("please wait sir, fetching the latest news")
-                news()
-
-            elif "read pdf" in self.query:
-                pdf_reader()
-
-            elif "sleep now" in self.query:
-                speak("okay sir")
-                self.null()
-
-            elif "activate how to do mode" in self.query:
-                speak("activated how to do mode")
-                how = self.voicecom()
-                max_result = 1
-                how_to = search_wikihow(how, max_result)
-                if len(how_to) != 1:
-                    raise AssertionError
-                how_to[0].print()
-                speak(how_to[0].summary)
-
-            elif "exit" in self.query:
-                sys.exit()
-
-            elif (
-                "hey" in self.query
-                or "hi" in self.query
-                or "hello" in self.query
-                or "ok" in self.query
-            ):
-                greetings = [
-                    "hey, how can I help you" + person_obj.name,
-                    "hey, what's up?" + person_obj.name,
-                    "I'm listening" + person_obj.name,
-                    "how can I help you?" + person_obj.name,
-                    "hello" + person_obj.name,
-                ]
-                greet = greetings[random.randint(0, len(greetings) - 1)]
-                speak(greet)
-
-            elif (
-                "what is your name" in self.query
-                or "what's your name" in self.query
-                or "tell me your name" in self.query
-            ):
-
-                if person_obj.name:
-                    # gets users name from voice input
-                    speak(f"My name is {friday.name}, {person_obj.name}")
-                else:
-                    # in case you haven't provided your name.
-                    speak(f"My name is {friday_obj.name}. what's your name sir?")
-
-            elif "my name is" in self.query:
-                person_name = self.query.split("is")[-1].strip()
-                speak("okay, i will remember that sir" + person_name)
-                # remember name in person object
-                person_obj.rename(person_name)
-
-            elif "what is my name" in self.query:
-                speak("Your name must be " + person_obj.name)
-
-            elif "your name should be" in self.query:
-                friday_name = self.query.split("be")[-1].strip()
-                speak("okay, i will remember that my name is " + friday_name)
-                # remember name in asis object
-                friday.rename(self, friday_name)
-
-            elif "how are you" in self.query or "how are you doing" in self.query:
-                speak("I'm very well, thanks for asking " + person_obj.name + "sir")
-
-            elif "toss coin" in self.query or "flip coin" in self.query:
-                moves = ["head", "tails"]
-                coin = random.choice(moves)
-                speak("I chose " + coin)
+            assistant.request(self.query)
+            # if "open calender" in self.query:
+            #     calender()
+            #     self.null()
+            #
+            # elif "open command prompt" in self.query:
+            #     os.system("start cmd")
+            #
+            # elif "open camera" in self.query:
+            #     cam()
+            #
+            # elif "ip address" in self.query:
+            #     ip()
+            #
+            # elif "introduce yourself" in self.query:
+            #     intro()
+            #     speak("I am created by Zameel ali, Subhash and Naveen")
+            #     speak("I was made by using python")
+            #     speak("i am born on 11th oct 2021")
+            #     speak("hope you got the information")
+            #
+            # elif "time" in self.query:
+            #     time_now()
+            #
+            # elif "take a screenshot" in self.query:
+            #     screenshot()
+            #     speak("Done!")
+            #
+            # elif "support" in self.query:
+            #     support()
+            #
+            # elif "stock price of" in self.query:
+            #     stock(self)
+            #
+            # elif "open youtube" in self.query:
+            #     youtube(self)
+            #
+            # elif "wikipedia" in self.query:
+            #     wiki(self)
+            #
+            # elif "search google" in self.query:
+            #     google(self)
+            #
+            # elif "how are you" in self.query:
+            #     list3 = ["I'm fine, glad you me that", ""]
+            #     speak(random.choice(list3))
+            #
+            # elif "i love you" in self.query:
+            #     speak("It's hard to understand")
+            #
+            # elif "write a note" in self.query:
+            #     note(self)
+            #
+            # elif "day" in self.query:
+            #     days()
+            #
+            # elif "show note" in self.query:
+            #     read_note()
+            #
+            # elif "route to" in self.query:
+            #     route_to(self)
+            #
+            # # add more url
+            #
+            # elif "ask" in self.query or "question" in self.query:
+            #     ask(self)
+            #
+            # elif "send email" in self.query:
+            #     email(self)
+            #
+            # elif "tell me a joke" in self.query:
+            #     joke = pyjokes.get_joke()
+            #     speak(joke)
+            #
+            # elif "change window" in self.query:
+            #     speak("switching windows")
+            #     pyautogui.keyDown("alt")
+            #     pyautogui.keyDown("tab")
+            #     time.sleep(1)
+            #     pyautogui.keyUp("alt")
+            #
+            # elif "tell me news" in self.query:
+            #     speak("please wait sir, fetching the latest news")
+            #     news()
+            #
+            # elif "read pdf" in self.query:
+            #     pdf_reader()
+            #
+            # elif "sleep now" in self.query:
+            #     speak("okay sir")
+            #     self.null()
+            #
+            # elif "activate how to do mode" in self.query:
+            #     wiki_step_mode(self)
+            #
+            # elif "exit" in self.query:
+            #     sys.exit()
+            #
+            # elif (
+            #         "hey" in self.query
+            #         or "hi" in self.query
+            #         or "hello" in self.query
+            #         or "ok" in self.query
+            # ):
+            #     greetings = [
+            #         "hey, how can I help you" + person_obj.name,
+            #         "hey, what's up?" + person_obj.name,
+            #         "I'm listening" + person_obj.name,
+            #         "how can I help you?" + person_obj.name,
+            #         "hello" + person_obj.name,
+            #     ]
+            #     greet = greetings[random.randint(0, len(greetings) - 1)]
+            #     speak(greet)
+            #
+            # elif (
+            #         "what is your name" in self.query
+            #         or "what's your name" in self.query
+            #         or "tell me your name" in self.query
+            # ):
+            #
+            #     if person_obj.name:
+            #         # gets users name from voice input
+            #         speak(f"My name is {friday.name}, {person_obj.name}")
+            #     else:
+            #         # in case you haven't provided your name.
+            #         speak(f"My name is {friday_obj.name}. what's your name sir?")
+            #
+            # elif "my name is" in self.query:
+            #     person_name = self.query.split("is")[-1].strip()
+            #     speak("okay, i will remember that sir" + person_name)
+            #     # remember name in person object
+            #     person_obj.rename(person_name)
+            #
+            # elif "what is my name" in self.query:
+            #     speak("Your name must be " + person_obj.name)
+            #
+            # elif "your name should be" in self.query:
+            #     friday_name = self.query.split("be")[-1].strip()
+            #     speak("okay, i will remember that my name is " + friday_name)
+            #     # remember name in asis object
+            #     friday.rename(self, friday_name)
+            #
+            # elif "how are you" in self.query or "how are you doing" in self.query:
+            #     speak("I'm very well, thanks for asking " + person_obj.name + "sir")
+            #
+            # elif "toss coin" in self.query or "flip coin" in self.query:
+            #     moves = ["head", "tails"]
+            #     coin = random.choice(moves)
+            #     speak("I chose " + coin)
 
 
 startExecution = MainThread()
@@ -505,6 +563,7 @@ class Main(QMainWindow):
 
     def start(self):
         """Background gif play"""
+
         self.ui.movie = QtGui.QMovie("untitled-6.gif")
         self.ui.label.setMovie(self.ui.movie)
         self.ui.movie.start()
