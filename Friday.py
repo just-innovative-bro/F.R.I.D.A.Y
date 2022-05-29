@@ -4,7 +4,6 @@ from gtts import gTTS  # pip install gTTS
 import requests
 import speech_recognition as sr  # pip install speechRecognition
 import datetime
-# import time
 import cv2  # pip install opencv-python
 import random
 from requests import get
@@ -393,7 +392,6 @@ class MainThread(QThread):  # main
 
     def main(self):  # main task execution
         """The original task"""
-        # setup()
         wish()
         while True:
             self.query = self.voicecom().lower()
