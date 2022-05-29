@@ -411,7 +411,6 @@ class Main(QMainWindow):
 
     def start(self):
         """Background gif play"""
-
         self.ui.movie = QtGui.QMovie("untitled-6.gif")
         self.ui.label.setMovie(self.ui.movie)
         self.ui.movie.start()
