@@ -167,14 +167,13 @@ def screenshot():
 
 def ask(self):
     """Solve"""
-    speak(
-        "I can answer to computational and geographical questions  and what question do you want to ask now"
-    )
+    speak("I can answer to computational questions")
     question = self.voicecom().lower()
     app_id = "QTLYH7-4UV274RV6V"
     client = wolframalpha.Client(app_id)
     res = client.query(question)
     answer = next(res.results).text
+
     speak(answer)
     print(answer)
 
