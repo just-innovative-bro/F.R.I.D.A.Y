@@ -4,8 +4,6 @@ from gtts import gTTS  # pip install gTTS
 import requests
 import speech_recognition as sr  # pip install speechRecognition
 import datetime
-
-# import time
 import cv2  # pip install opencv-python
 import random
 from requests import get
@@ -74,6 +72,7 @@ def wish():
 
 
 def jokes():
+    """tells joke"""
     joke = pyjokes.get_joke()
     speak(joke)
 
@@ -97,6 +96,7 @@ def email(self):
 
 
 def quotes():
+    """daily quotes"""
     search = "Jasper Fforde"
     result = quote(search, limit=1)
     print(result)
@@ -213,6 +213,7 @@ def read_note():
 
 
 def cmd():
+    """opens command promt"""
     os.system("start cmd")
 
 
@@ -242,7 +243,7 @@ def cam():
     cv2.namedWindow("Face cam")
 
     while True:
-        ret, frame = video_capture.read()
+        _ret, frame = video_capture.read()
         cv2.imshow("Face cam", frame)
 
         # This breaks on 'q' key
@@ -275,6 +276,7 @@ def pdf_reader():
 
 
 def time_now():
+    """tells time"""
     stripe = datetime.datetime.now().strftime("%H:%M")
     speak(f"Sir, the time is {stripe}")
 
@@ -286,6 +288,7 @@ def support():
 
 
 def youtube(self):
+    """search youtube video"""
     search_term = self.query.split("for")[-1]
     search_term = search_term.replace("open youtube", "").replace("search", "")
     url = "https://www.youtube.com/results?search_query=" + search_term
@@ -294,6 +297,7 @@ def youtube(self):
 
 
 def google(self):
+    """google search"""
     speak("sir, what should i search")
     search_term = self.query.split("to")[-1]
     url = "https://www.google.co.in/search?q=" + search_term
@@ -301,6 +305,7 @@ def google(self):
 
 
 def route_to(self):
+    """google map routing"""
     search_term = self.query.split("to")[-1]
     url = "https://www.google.co.in/maps/dir/" + search_term
     webbrowser.get().open(url)
@@ -308,6 +313,7 @@ def route_to(self):
 
 
 def wiki_step_mode(self):
+    """step by step process"""
     speak("activated how to do mode")
     how = self.voicecom()
     max_result = 1
@@ -392,7 +398,6 @@ class MainThread(QThread):  # main
 
     def main(self):  # main task execution
         """The original task"""
-        # setup()
         wish()
         while True:
             self.query = self.voicecom().lower()
@@ -414,7 +419,6 @@ class Main(QMainWindow):
 
     def start(self):
         """Background gif play"""
-
         self.ui.movie = QtGui.QMovie("untitled-6.gif")
         self.ui.label.setMovie(self.ui.movie)
         self.ui.movie.start()
