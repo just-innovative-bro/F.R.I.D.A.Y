@@ -4,6 +4,7 @@ from gtts import gTTS  # pip install gTTS
 import requests
 import speech_recognition as sr  # pip install speechRecognition
 import datetime
+
 # import time
 import cv2  # pip install opencv-python
 import random
@@ -96,7 +97,7 @@ def email(self):
 
 
 def quotes():
-    search = 'Jasper Fforde'
+    search = "Jasper Fforde"
     result = quote(search, limit=1)
     print(result)
     speak(result)
@@ -286,9 +287,7 @@ def support():
 
 def youtube(self):
     search_term = self.query.split("for")[-1]
-    search_term = search_term.replace("open youtube", "").replace(
-        "search", ""
-    )
+    search_term = search_term.replace("open youtube", "").replace("search", "")
     url = "https://www.youtube.com/results?search_query=" + search_term
     webbrowser.get().open(url)
     speak("Here is what I found for " + search_term + "on youtube")
@@ -345,7 +344,7 @@ mappings = {
     "jokes": jokes,
     "quote": quotes,
     "open_cmd": cmd,
-    "news": news
+    "news": news,
 }
 assistant = GenericAssistant("intents.json", intent_methods=mappings)
 assistant.train_model()
