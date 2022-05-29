@@ -243,7 +243,7 @@ def cam():
     cv2.namedWindow("Face cam")
 
     while True:
-        ret, frame = video_capture.read()
+        _ret, frame = video_capture.read()
         cv2.imshow("Face cam", frame)
 
         # This breaks on 'q' key
