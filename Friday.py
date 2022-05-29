@@ -284,6 +284,7 @@ def support():
 
 
 def youtube(self):
+    """search youtube video"""
     search_term = self.query.split("for")[-1]
     search_term = search_term.replace("open youtube", "").replace("search", "")
     url = "https://www.youtube.com/results?search_query=" + search_term
@@ -292,6 +293,7 @@ def youtube(self):
 
 
 def google(self):
+    """google search"""
     speak("sir, what should i search")
     search_term = self.query.split("to")[-1]
     url = "https://www.google.co.in/search?q=" + search_term
@@ -299,6 +301,7 @@ def google(self):
 
 
 def route_to(self):
+    """google map routing"""
     search_term = self.query.split("to")[-1]
     url = "https://www.google.co.in/maps/dir/" + search_term
     webbrowser.get().open(url)
@@ -306,6 +309,7 @@ def route_to(self):
 
 
 def wiki_step_mode(self):
+    """step by step process"""
     speak("activated how to do mode")
     how = self.voicecom()
     max_result = 1
