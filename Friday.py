@@ -72,6 +72,7 @@ def wish():
 
 
 def jokes():
+    """tells joke"""
     joke = pyjokes.get_joke()
     speak(joke)
 
@@ -95,6 +96,7 @@ def email(self):
 
 
 def quotes():
+    """daily quotes"""
     search = "Jasper Fforde"
     result = quote(search, limit=1)
     print(result)
@@ -211,6 +213,7 @@ def read_note():
 
 
 def cmd():
+    """opens command promt"""
     os.system("start cmd")
 
 
@@ -273,6 +276,7 @@ def pdf_reader():
 
 
 def time_now():
+    """tells time"""
     stripe = datetime.datetime.now().strftime("%H:%M")
     speak(f"Sir, the time is {stripe}")
 
