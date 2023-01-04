@@ -1,4 +1,5 @@
-import os, shlex
+import os
+import shlex
 import sys
 from gtts import gTTS  # pip install gTTS
 import requests
