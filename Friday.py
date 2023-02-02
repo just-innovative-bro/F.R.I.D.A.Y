@@ -212,7 +212,8 @@ def read_note():
 
 def cmd():
     """opens command promt"""
-    import os, shlex
+    import os
+    import shlex
     os.system(shlex.quote(cmd))
 
 
