@@ -1,5 +1,3 @@
-import os
-import shlex
 import sys
 from gtts import gTTS  # pip install gTTS
 import requests
@@ -214,6 +212,7 @@ def read_note():
 
 def cmd():
     """opens command promt"""
+    import os, shlex
     os.system(shlex.quote(cmd))
 
 
