@@ -214,6 +214,7 @@ def cmd():
     """opens command promt"""
     import os
     import shlex
+
     os.system(shlex.quote(cmd))
 
 
