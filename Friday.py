@@ -123,8 +123,8 @@ def news():
     ]
     for ar in articles:
         head.append(ar["title"])
-    for i in range(len(day)):
-        speak(f"today's {day[i]} news is: {head[i]}")
+    for i, item in enumerate(day):
+        speak(f"today's {item} news is: {head[i]}")
 
 
 def days():
